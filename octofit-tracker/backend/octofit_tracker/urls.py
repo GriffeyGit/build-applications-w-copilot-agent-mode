@@ -17,7 +17,7 @@ Including another URLconf
 
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet
+from .views import UserViewSet, TeamViewSet, ActivityViewSet, LeaderboardViewSet, WorkoutViewSet, api_root
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
@@ -31,4 +31,8 @@ router.register(r'workouts', WorkoutViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-root/', include(router.urls)),
+]
+
+urlpatterns += [
+    path('api/', api_root, name='api-root'),
 ]

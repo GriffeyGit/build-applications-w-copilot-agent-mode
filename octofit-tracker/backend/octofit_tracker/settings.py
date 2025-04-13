@@ -64,7 +64,7 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # Allow all hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'potential-system-x9pp9vrv5gxhv65p-8000.app.github.dev']
 
 # Database configuration for MongoDB
 DATABASES = {
@@ -132,3 +132,5 @@ TEMPLATES = [
         },
     },
 ]
+
+ROOT_URLCONF = 'octofit_tracker.urls'
